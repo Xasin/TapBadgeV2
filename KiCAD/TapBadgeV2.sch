@@ -1,0 +1,419 @@
+EESchema Schematic File Version 4
+LIBS:TapBadgeV2-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 3725 1825 1925 1300
+U 60EDF44C
+F0 "Core Schematic" 50
+F1 "ESP_Core.sch" 50
+$EndSheet
+$Sheet
+S 875  1650 1400 1300
+U 60EE6959
+F0 "Power Handling" 50
+F1 "Power.sch" 50
+$EndSheet
+$Comp
+L Device:R_Small R?
+U 1 1 60F20AFF
+P 8100 4275
+AR Path="/60EDF44C/60F20AFF" Ref="R?"  Part="1" 
+AR Path="/60F20AFF" Ref="R101"  Part="1" 
+F 0 "R101" H 8159 4321 50  0000 L CNN
+F 1 "2.2k 0402" H 8159 4230 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 8100 4275 50  0001 C CNN
+F 3 "~" H 8100 4275 50  0001 C CNN
+	1    8100 4275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 60F20B06
+P 8600 4275
+AR Path="/60EDF44C/60F20B06" Ref="R?"  Part="1" 
+AR Path="/60F20B06" Ref="R102"  Part="1" 
+F 0 "R102" H 8659 4321 50  0000 L CNN
+F 1 "2.2k 0402" H 8659 4230 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 8600 4275 50  0001 C CNN
+F 3 "~" H 8600 4275 50  0001 C CNN
+	1    8600 4275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 4175 8350 4175
+$Comp
+L power:+3.3V #PWR0109
+U 1 1 60F20BA9
+P 8350 4075
+F 0 "#PWR0109" H 8350 3925 50  0001 C CNN
+F 1 "+3.3V" H 8365 4248 50  0000 C CNN
+F 2 "" H 8350 4075 50  0001 C CNN
+F 3 "" H 8350 4075 50  0001 C CNN
+	1    8350 4075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 4075 8350 4175
+Connection ~ 8350 4175
+Wire Wire Line
+	8350 4175 8600 4175
+Text GLabel 8100 4525 3    50   Input ~ 0
+SDA
+Text GLabel 8600 4525 3    50   Input ~ 0
+SCL
+Wire Wire Line
+	8600 4525 8600 4375
+Wire Wire Line
+	8100 4375 8100 4525
+$Sheet
+S 6650 1825 1900 1300
+U 60F2BC2A
+F0 "Sensors" 50
+F1 "Sensors.sch" 50
+$EndSheet
+$Comp
+L Device:Speaker LS101
+U 1 1 60F48D5A
+P 3250 5275
+F 0 "LS101" H 3420 5271 50  0000 L CNN
+F 1 "Speaker" H 3420 5180 50  0000 L CNN
+F 2 "XasPrints:SP-1609S-1" H 3250 5075 50  0001 C CNN
+F 3 "~" H 3240 5225 50  0001 C CNN
+	1    3250 5275
+	1    0    0    -1  
+$EndComp
+$Comp
+L XasParts:DRV2605 U101
+U 1 1 60F8A813
+P 6750 5675
+F 0 "U101" H 7025 6750 50  0000 C CNN
+F 1 "DRV2605" H 7150 6825 50  0000 C CNN
+F 2 "Package_SO:VSSOP-10_3x3mm_P0.5mm" H 6725 5300 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/drv2605l.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1624282100245&ref_url=https%253A%252F%252Fwww.digikey.co.uk%252F" H 6825 5400 50  0001 C CNN
+	1    6750 5675
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0135
+U 1 1 60F8AF84
+P 6750 5975
+F 0 "#PWR0135" H 6750 5725 50  0001 C CNN
+F 1 "GND" H 6755 5802 50  0000 C CNN
+F 2 "" H 6750 5975 50  0001 C CNN
+F 3 "" H 6750 5975 50  0001 C CNN
+	1    6750 5975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 5975 6750 5900
+$Comp
+L Device:C_Small C?
+U 1 1 60F93B4F
+P 7475 5575
+AR Path="/60EE6959/60F93B4F" Ref="C?"  Part="1" 
+AR Path="/60F2BC2A/60F93B4F" Ref="C?"  Part="1" 
+AR Path="/60F93B4F" Ref="C102"  Part="1" 
+F 0 "C102" H 7567 5621 50  0000 L CNN
+F 1 "1uF 0402" H 7567 5530 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7475 5575 50  0001 C CNN
+F 3 "~" H 7475 5575 50  0001 C CNN
+	1    7475 5575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 5325 7475 5325
+Wire Wire Line
+	7475 5325 7475 5475
+Wire Wire Line
+	7475 5675 7475 5900
+Wire Wire Line
+	7475 5900 6750 5900
+Connection ~ 6750 5900
+Wire Wire Line
+	6750 5900 6750 5825
+$Comp
+L Motor:Motor_AC M101
+U 1 1 60F9476E
+P 7825 5000
+F 0 "M101" H 7983 4996 50  0000 L CNN
+F 1 "G0832013D" H 7983 4905 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 7825 4910 50  0001 C CNN
+F 3 "~" H 7825 4910 50  0001 C CNN
+	1    7825 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7825 5300 7550 5300
+Wire Wire Line
+	7550 5300 7550 5125
+Wire Wire Line
+	7550 5125 7300 5125
+Wire Wire Line
+	7300 5025 7550 5025
+Wire Wire Line
+	7550 5025 7550 4800
+Wire Wire Line
+	7550 4800 7825 4800
+$Comp
+L power:+BATT #PWR0136
+U 1 1 60F9587F
+P 6750 4225
+F 0 "#PWR0136" H 6750 4075 50  0001 C CNN
+F 1 "+BATT" H 6765 4398 50  0000 C CNN
+F 2 "" H 6750 4225 50  0001 C CNN
+F 3 "" H 6750 4225 50  0001 C CNN
+	1    6750 4225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 4225 6750 4375
+Wire Wire Line
+	6750 4475 6700 4475
+Wire Wire Line
+	6750 4475 6800 4475
+Connection ~ 6750 4475
+$Comp
+L Device:C_Small C?
+U 1 1 60F965BD
+P 6525 4375
+AR Path="/60EE6959/60F965BD" Ref="C?"  Part="1" 
+AR Path="/60F2BC2A/60F965BD" Ref="C?"  Part="1" 
+AR Path="/60F965BD" Ref="C101"  Part="1" 
+F 0 "C101" H 6617 4421 50  0000 L CNN
+F 1 "1uF 0402" H 6617 4330 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6525 4375 50  0001 C CNN
+F 3 "~" H 6525 4375 50  0001 C CNN
+	1    6525 4375
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6625 4375 6750 4375
+Connection ~ 6750 4375
+Wire Wire Line
+	6750 4375 6750 4475
+$Comp
+L power:GND #PWR0137
+U 1 1 60F970DC
+P 6350 4450
+F 0 "#PWR0137" H 6350 4200 50  0001 C CNN
+F 1 "GND" H 6355 4277 50  0000 C CNN
+F 2 "" H 6350 4450 50  0001 C CNN
+F 3 "" H 6350 4450 50  0001 C CNN
+	1    6350 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 4450 6350 4375
+Wire Wire Line
+	6350 4375 6425 4375
+$Comp
+L Mechanical:Fiducial FID101
+U 1 1 60F9864E
+P 1200 7175
+F 0 "FID101" H 1285 7221 50  0000 L CNN
+F 1 "Fiducial" H 1285 7130 50  0000 L CNN
+F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 1200 7175 50  0001 C CNN
+F 3 "~" H 1200 7175 50  0001 C CNN
+	1    1200 7175
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID102
+U 1 1 60F98AFA
+P 1775 7175
+F 0 "FID102" H 1860 7221 50  0000 L CNN
+F 1 "Fiducial" H 1860 7130 50  0000 L CNN
+F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 1775 7175 50  0001 C CNN
+F 3 "~" H 1775 7175 50  0001 C CNN
+	1    1775 7175
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID103
+U 1 1 60F99347
+P 1200 7400
+F 0 "FID103" H 1285 7446 50  0000 L CNN
+F 1 "Fiducial" H 1285 7355 50  0000 L CNN
+F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 1200 7400 50  0001 C CNN
+F 3 "~" H 1200 7400 50  0001 C CNN
+	1    1200 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID104
+U 1 1 60F9939B
+P 1775 7400
+F 0 "FID104" H 1860 7446 50  0000 L CNN
+F 1 "Fiducial" H 1860 7355 50  0000 L CNN
+F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 1775 7400 50  0001 C CNN
+F 3 "~" H 1775 7400 50  0001 C CNN
+	1    1775 7400
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 9750 3125 1275 850 
+U 60F9A292
+F0 "Ring 'o LEDs" 50
+F1 "RingOfLED.sch" 50
+$EndSheet
+$Comp
+L XasParts:MAX98357A AMP101
+U 1 1 60FAC435
+P 2400 5725
+F 0 "AMP101" H 2800 5700 50  0000 L CNN
+F 1 "MAX98357A" H 2800 5625 50  0000 L CNN
+F 2 "Package_DFN_QFN:QFN-16-1EP_3x3mm_P0.5mm_EP1.9x1.9mm_ThermalVias" H 2500 5375 50  0001 C CNN
+F 3 "" H 2500 5375 50  0001 C CNN
+	1    2400 5725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 5275 3050 5275
+Wire Wire Line
+	2950 5375 3050 5375
+Wire Wire Line
+	2400 6075 2500 6075
+Connection ~ 2500 6075
+Wire Wire Line
+	2500 6075 2550 6075
+Connection ~ 2600 6075
+Wire Wire Line
+	2600 6075 2700 6075
+Wire Wire Line
+	2550 6075 2550 6175
+Connection ~ 2550 6075
+Wire Wire Line
+	2550 6075 2600 6075
+$Comp
+L power:GND #PWR0119
+U 1 1 60FAE738
+P 2550 6175
+F 0 "#PWR0119" H 2550 5925 50  0001 C CNN
+F 1 "GND" H 2555 6002 50  0000 C CNN
+F 2 "" H 2550 6175 50  0001 C CNN
+F 3 "" H 2550 6175 50  0001 C CNN
+	1    2550 6175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 4675 2400 4675
+Wire Wire Line
+	2400 4575 2400 4675
+Connection ~ 2400 4675
+Wire Wire Line
+	2400 4675 2450 4675
+Text GLabel 2400 4575 1    50   Input ~ 0
+VGLOW
+$Comp
+L Device:C_Small C?
+U 1 1 60FB3667
+P 1650 4800
+AR Path="/60EE6959/60FB3667" Ref="C?"  Part="1" 
+AR Path="/60F2BC2A/60FB3667" Ref="C?"  Part="1" 
+AR Path="/60FB3667" Ref="C103"  Part="1" 
+F 0 "C103" H 1742 4846 50  0000 L CNN
+F 1 "10uF 0402" V 1600 4850 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1650 4800 50  0001 C CNN
+F 3 "~" H 1650 4800 50  0001 C CNN
+	1    1650 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60FB3952
+P 1925 4800
+AR Path="/60EE6959/60FB3952" Ref="C?"  Part="1" 
+AR Path="/60F2BC2A/60FB3952" Ref="C?"  Part="1" 
+AR Path="/60FB3952" Ref="C104"  Part="1" 
+F 0 "C104" H 2017 4846 50  0000 L CNN
+F 1 "0.1uF 0402" V 1875 4850 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1925 4800 50  0001 C CNN
+F 3 "~" H 1925 4800 50  0001 C CNN
+	1    1925 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1925 4700 1925 4675
+Wire Wire Line
+	1925 4675 2000 4675
+Connection ~ 2350 4675
+Wire Wire Line
+	1650 4700 1650 4675
+Wire Wire Line
+	1650 4675 1925 4675
+Connection ~ 1925 4675
+Wire Wire Line
+	1650 4900 1775 4900
+$Comp
+L power:GND #PWR0138
+U 1 1 60FB5582
+P 1775 4900
+F 0 "#PWR0138" H 1775 4650 50  0001 C CNN
+F 1 "GND" H 1780 4727 50  0000 C CNN
+F 2 "" H 1775 4900 50  0001 C CNN
+F 3 "" H 1775 4900 50  0001 C CNN
+	1    1775 4900
+	1    0    0    -1  
+$EndComp
+Connection ~ 1775 4900
+Wire Wire Line
+	1775 4900 1925 4900
+Text GLabel 1750 5425 0    50   Input ~ 0
+SPKR_LRCK
+Text GLabel 1750 5525 0    50   Input ~ 0
+SPKR_BCK
+Text GLabel 1750 5625 0    50   Input ~ 0
+SPKR_DATA
+Wire Wire Line
+	1750 5625 2000 5625
+Wire Wire Line
+	1750 5525 2000 5525
+Wire Wire Line
+	1750 5425 2000 5425
+Wire Wire Line
+	2000 5175 2000 4675
+Connection ~ 2000 4675
+Wire Wire Line
+	2000 4675 2350 4675
+Wire Wire Line
+	2000 5275 2000 5175
+Connection ~ 2000 5175
+Text GLabel 6075 5025 0    50   Input ~ 0
+SCL
+Text GLabel 6075 5125 0    50   Input ~ 0
+SDA
+Wire Wire Line
+	6075 5125 6200 5125
+Wire Wire Line
+	6075 5025 6200 5025
+$Comp
+L Mechanical:Fiducial FID105
+U 1 1 60FF59E3
+P 4525 6125
+F 0 "FID105" H 4610 6171 50  0000 L CNN
+F 1 "Fiducial" H 4610 6080 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 4525 6125 50  0001 C CNN
+F 3 "~" H 4525 6125 50  0001 C CNN
+	1    4525 6125
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 7925 900  1100 650 
+U 61017570
+F0 "OLED Panel" 50
+F1 "OLED_Panel.sch" 50
+$EndSheet
+$EndSCHEMATC

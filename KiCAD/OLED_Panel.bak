@@ -1,0 +1,253 @@
+EESchema Schematic File Version 4
+LIBS:TapBadgeV2-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L XasParts:VG-6432TSWAG01_IIC_sh1106 OEL?
+U 1 1 61018320
+P 5875 4475
+AR Path="/61018320" Ref="OEL?"  Part="1" 
+AR Path="/61017570/61018320" Ref="OEL?"  Part="1" 
+F 0 "OEL?" H 6425 5625 50  0000 C CNN
+F 1 "VG-6432TSWAG01_IIC_sh1106" H 6900 5525 50  0000 C CNN
+F 2 "" H 5825 4375 50  0001 C CNN
+F 3 "" H 5825 4375 50  0001 C CNN
+	1    5875 4475
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6101894B
+P 5875 4900
+F 0 "#PWR?" H 5875 4650 50  0001 C CNN
+F 1 "GND" H 5880 4727 50  0000 C CNN
+F 2 "" H 5875 4900 50  0001 C CNN
+F 3 "" H 5875 4900 50  0001 C CNN
+	1    5875 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5875 4900 5875 4750
+$Comp
+L Device:C_Small C?
+U 1 1 6101A572
+P 6225 2700
+AR Path="/60EE6959/6101A572" Ref="C?"  Part="1" 
+AR Path="/60F2BC2A/6101A572" Ref="C?"  Part="1" 
+AR Path="/6101A572" Ref="C?"  Part="1" 
+AR Path="/61017570/6101A572" Ref="C?"  Part="1" 
+F 0 "C?" H 6317 2746 50  0000 L CNN
+F 1 "1uF 0402" V 6275 2275 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6225 2700 50  0001 C CNN
+F 3 "~" H 6225 2700 50  0001 C CNN
+	1    6225 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 6101AC40
+P 6225 2400
+AR Path="/60EE6959/6101AC40" Ref="C?"  Part="1" 
+AR Path="/60F2BC2A/6101AC40" Ref="C?"  Part="1" 
+AR Path="/6101AC40" Ref="C?"  Part="1" 
+AR Path="/61017570/6101AC40" Ref="C?"  Part="1" 
+F 0 "C?" H 6317 2446 50  0000 L CNN
+F 1 "0.1uF 0402" V 6175 2450 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6225 2400 50  0001 C CNN
+F 3 "~" H 6225 2400 50  0001 C CNN
+	1    6225 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5975 2775 5975 2700
+Wire Wire Line
+	5975 2700 6125 2700
+Wire Wire Line
+	5975 2700 5975 2400
+Wire Wire Line
+	5975 2400 6125 2400
+Connection ~ 5975 2700
+$Comp
+L power:GND #PWR?
+U 1 1 6101AF22
+P 6725 2800
+F 0 "#PWR?" H 6725 2550 50  0001 C CNN
+F 1 "GND" H 6730 2627 50  0000 C CNN
+F 2 "" H 6725 2800 50  0001 C CNN
+F 3 "" H 6725 2800 50  0001 C CNN
+	1    6725 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6325 2700 6725 2700
+Wire Wire Line
+	6725 2700 6725 2800
+Wire Wire Line
+	6325 2400 6725 2400
+Wire Wire Line
+	6725 2400 6725 2700
+Connection ~ 6725 2700
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6101B0A8
+P 5975 2300
+F 0 "#PWR?" H 5975 2150 50  0001 C CNN
+F 1 "+3.3V" H 5990 2473 50  0000 C CNN
+F 2 "" H 5975 2300 50  0001 C CNN
+F 3 "" H 5975 2300 50  0001 C CNN
+	1    5975 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5975 2300 5975 2400
+Connection ~ 5975 2400
+Wire Wire Line
+	6425 4075 6875 4075
+Wire Wire Line
+	6875 4075 6875 4175
+$Comp
+L Device:R_Small R?
+U 1 1 6101C56A
+P 6500 4350
+F 0 "R?" V 6600 4450 50  0000 L CNN
+F 1 "560k 0402" V 6600 3975 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 6500 4350 50  0001 C CNN
+F 3 "~" H 6500 4350 50  0001 C CNN
+	1    6500 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6425 4225 6500 4225
+Wire Wire Line
+	6500 4225 6500 4250
+Wire Wire Line
+	6500 4450 6500 4750
+Wire Wire Line
+	6500 4750 5875 4750
+Connection ~ 5875 4750
+Wire Wire Line
+	5875 4750 5875 4625
+Wire Wire Line
+	6500 4750 6875 4750
+Wire Wire Line
+	6875 4750 6875 4475
+Connection ~ 6500 4750
+$Comp
+L Device:C C?
+U 1 1 6101D0CC
+P 7525 4325
+F 0 "C?" V 7475 4400 50  0000 L CNN
+F 1 "2.2uF 0603 16V" V 7675 3925 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7563 4175 50  0001 C CNN
+F 3 "~" H 7525 4325 50  0001 C CNN
+	1    7525 4325
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 6101D31A
+P 7275 4325
+AR Path="/60EE6959/6101D31A" Ref="C?"  Part="1" 
+AR Path="/60F2BC2A/6101D31A" Ref="C?"  Part="1" 
+AR Path="/6101D31A" Ref="C?"  Part="1" 
+AR Path="/61017570/6101D31A" Ref="C?"  Part="1" 
+F 0 "C?" H 7367 4371 50  0000 L CNN
+F 1 "0.1uF 0402 16V" V 7225 4375 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7275 4325 50  0001 C CNN
+F 3 "~" H 7275 4325 50  0001 C CNN
+	1    7275 4325
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6875 4750 7275 4750
+Wire Wire Line
+	7275 4750 7275 4425
+Connection ~ 6875 4750
+Wire Wire Line
+	7275 4750 7525 4750
+Wire Wire Line
+	7525 4750 7525 4475
+Connection ~ 7275 4750
+Wire Wire Line
+	6425 3925 7275 3925
+Wire Wire Line
+	7275 3925 7275 4225
+Wire Wire Line
+	7275 3925 7525 3925
+Wire Wire Line
+	7525 3925 7525 4175
+Connection ~ 7275 3925
+$Comp
+L Device:C_Small C?
+U 1 1 6101FE0E
+P 5025 3875
+AR Path="/60EE6959/6101FE0E" Ref="C?"  Part="1" 
+AR Path="/60F2BC2A/6101FE0E" Ref="C?"  Part="1" 
+AR Path="/6101FE0E" Ref="C?"  Part="1" 
+AR Path="/61017570/6101FE0E" Ref="C?"  Part="1" 
+F 0 "C?" H 5117 3921 50  0000 L CNN
+F 1 "1uF 0603 16V" H 4450 3950 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5025 3875 50  0001 C CNN
+F 3 "~" H 5025 3875 50  0001 C CNN
+	1    5025 3875
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 6101FF32
+P 5025 4225
+AR Path="/60EE6959/6101FF32" Ref="C?"  Part="1" 
+AR Path="/60F2BC2A/6101FF32" Ref="C?"  Part="1" 
+AR Path="/6101FF32" Ref="C?"  Part="1" 
+AR Path="/61017570/6101FF32" Ref="C?"  Part="1" 
+F 0 "C?" H 5117 4271 50  0000 L CNN
+F 1 "1uF 0603 16V" H 4450 4300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5025 4225 50  0001 C CNN
+F 3 "~" H 5025 4225 50  0001 C CNN
+	1    5025 4225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5025 3775 5325 3775
+Wire Wire Line
+	5325 3775 5325 3875
+Wire Wire Line
+	5325 3975 5025 3975
+Wire Wire Line
+	5025 4125 5325 4125
+Wire Wire Line
+	5025 4325 5325 4325
+Wire Wire Line
+	5325 4325 5325 4225
+$Comp
+L Device:C C?
+U 1 1 61024210
+P 6875 4325
+F 0 "C?" V 6825 4400 50  0000 L CNN
+F 1 "2.2uF 0603 16V" V 7025 3925 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6913 4175 50  0001 C CNN
+F 3 "~" H 6875 4325 50  0001 C CNN
+	1    6875 4325
+	1    0    0    -1  
+$EndComp
+Text GLabel 5200 3375 0    50   Input ~ 0
+SDA
+Text GLabel 5200 3475 0    50   Input ~ 0
+SCL
+Wire Wire Line
+	5200 3475 5325 3475
+Wire Wire Line
+	5200 3375 5325 3375
+$EndSCHEMATC

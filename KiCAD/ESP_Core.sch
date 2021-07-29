@@ -1,0 +1,292 @@
+EESchema Schematic File Version 4
+LIBS:TapBadgeV2-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RF_Module:ESP32-PICO-D4 U?
+U 1 1 60EDF520
+P 5475 3725
+AR Path="/60EDF520" Ref="U?"  Part="1" 
+AR Path="/60EDF44C/60EDF520" Ref="U201"  Part="1" 
+F 0 "U201" H 4725 2075 50  0000 C CNN
+F 1 "ESP32-PICO-D4" H 4950 2000 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm" H 5475 2025 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-pico-d4_datasheet_en.pdf" H 5725 2725 50  0001 C CNN
+	1    5475 3725
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 60EDF689
+P 5475 5550
+F 0 "#PWR0101" H 5475 5300 50  0001 C CNN
+F 1 "GND" H 5480 5377 50  0000 C CNN
+F 2 "" H 5475 5550 50  0001 C CNN
+F 3 "" H 5475 5550 50  0001 C CNN
+	1    5475 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5475 5550 5475 5325
+$Comp
+L Device:Antenna AE201
+U 1 1 60EE030A
+P 8350 2325
+F 0 "AE201" V 8304 2454 50  0000 L CNN
+F 1 "0479480001" V 8395 2454 50  0000 L CNN
+F 2 "XasPrints:0479480001" H 8350 2325 50  0001 C CNN
+F 3 "~" H 8350 2325 50  0001 C CNN
+	1    8350 2325
+	0    1    1    0   
+$EndComp
+NoConn ~ 4675 2625
+NoConn ~ 4675 2725
+NoConn ~ 4675 2825
+NoConn ~ 4675 2525
+Wire Wire Line
+	6275 2625 6675 2625
+Wire Wire Line
+	6275 2825 6675 2825
+$Comp
+L Device:C_Small C203
+U 1 1 60EE272C
+P 4175 2425
+F 0 "C203" H 4267 2471 50  0000 L CNN
+F 1 "0.1uF 0402" H 4267 2380 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4175 2425 50  0001 C CNN
+F 3 "~" H 4175 2425 50  0001 C CNN
+	1    4175 2425
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R201
+U 1 1 60EE2813
+P 4175 2225
+F 0 "R201" H 4234 2271 50  0000 L CNN
+F 1 "10k 0402" H 4234 2180 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 4175 2225 50  0001 C CNN
+F 3 "~" H 4175 2225 50  0001 C CNN
+	1    4175 2225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3825 2325 4175 2325
+Connection ~ 4175 2325
+Wire Wire Line
+	4175 2325 4675 2325
+$Comp
+L power:GND #PWR0102
+U 1 1 60EE2C3E
+P 4175 2525
+F 0 "#PWR0102" H 4175 2275 50  0001 C CNN
+F 1 "GND" H 4180 2352 50  0000 C CNN
+F 2 "" H 4175 2525 50  0001 C CNN
+F 3 "" H 4175 2525 50  0001 C CNN
+	1    4175 2525
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0103
+U 1 1 60EE308F
+P 4175 2075
+F 0 "#PWR0103" H 4175 1925 50  0001 C CNN
+F 1 "+3.3V" H 4190 2248 50  0000 C CNN
+F 2 "" H 4175 2075 50  0001 C CNN
+F 3 "" H 4175 2075 50  0001 C CNN
+	1    4175 2075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4175 2075 4175 2125
+Wire Wire Line
+	5275 2125 5375 2125
+Connection ~ 5375 2125
+Wire Wire Line
+	5375 2125 5425 2125
+Connection ~ 5475 2125
+Wire Wire Line
+	5475 2125 5575 2125
+Wire Wire Line
+	5425 2125 5425 1725
+Wire Wire Line
+	5425 1725 4925 1725
+Connection ~ 5425 2125
+Wire Wire Line
+	5425 2125 5475 2125
+$Comp
+L power:+3.3V #PWR0104
+U 1 1 60EE490A
+P 4925 1725
+F 0 "#PWR0104" H 4925 1575 50  0001 C CNN
+F 1 "+3.3V" H 4940 1898 50  0000 C CNN
+F 2 "" H 4925 1725 50  0001 C CNN
+F 3 "" H 4925 1725 50  0001 C CNN
+	1    4925 1725
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C202
+U 1 1 60EE4C70
+P 4925 1875
+F 0 "C202" H 5040 1921 50  0000 L CNN
+F 1 "22uF 10V 0805" H 5040 1830 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4963 1725 50  0001 C CNN
+F 3 "~" H 4925 1875 50  0001 C CNN
+	1    4925 1875
+	1    0    0    -1  
+$EndComp
+Connection ~ 4925 1725
+$Comp
+L Device:C_Small C201
+U 1 1 60EE4D1F
+P 4525 1875
+F 0 "C201" H 4617 1921 50  0000 L CNN
+F 1 "0.1uF 0402" H 4617 1830 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4525 1875 50  0001 C CNN
+F 3 "~" H 4525 1875 50  0001 C CNN
+	1    4525 1875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4525 1775 4525 1725
+Wire Wire Line
+	4525 1725 4925 1725
+Wire Wire Line
+	4525 1975 4525 2025
+Wire Wire Line
+	4525 2025 4700 2025
+$Comp
+L power:GND #PWR0105
+U 1 1 60EE55D9
+P 4700 2025
+F 0 "#PWR0105" H 4700 1775 50  0001 C CNN
+F 1 "GND" H 4705 1852 50  0000 C CNN
+F 2 "" H 4700 2025 50  0001 C CNN
+F 3 "" H 4700 2025 50  0001 C CNN
+	1    4700 2025
+	1    0    0    -1  
+$EndComp
+Connection ~ 4700 2025
+Wire Wire Line
+	4700 2025 4925 2025
+Wire Wire Line
+	6275 2325 8150 2325
+NoConn ~ 4675 3725
+NoConn ~ 4675 3825
+NoConn ~ 4675 3925
+NoConn ~ 4675 4025
+NoConn ~ 4675 4125
+NoConn ~ 4675 4225
+$Comp
+L Connector_Generic:Conn_02x04_Counter_Clockwise J201
+U 1 1 60F1A7A4
+P 1875 1450
+F 0 "J201" H 1925 1975 50  0000 C CNN
+F 1 "Conn_02x04_Counter_Clockwise" H 1925 1875 50  0000 C CNN
+F 2 "SOICBite:SOIC_clipProgSmall" H 1875 1450 50  0001 C CNN
+F 3 "~" H 1875 1450 50  0001 C CNN
+	1    1875 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1675 1350 1150 1350
+Text Label 1150 1350 0    50   ~ 0
+RESET
+Text Label 3825 2325 0    50   ~ 0
+RESET
+Text Label 6675 2625 2    50   ~ 0
+E>P
+Text Label 6675 2825 2    50   ~ 0
+P>E
+Wire Wire Line
+	1675 1450 1150 1450
+Text Label 1150 1450 0    50   ~ 0
+E>P
+Text Label 1150 1550 0    50   ~ 0
+P>E
+Wire Wire Line
+	1150 1550 1675 1550
+NoConn ~ 1675 1650
+NoConn ~ 2175 1650
+Wire Wire Line
+	2175 1550 2700 1550
+Text Label 2700 1550 2    50   ~ 0
+BOOT
+Wire Wire Line
+	2175 1450 2875 1450
+$Comp
+L power:GND #PWR0110
+U 1 1 60F1CE3E
+P 2875 1525
+F 0 "#PWR0110" H 2875 1275 50  0001 C CNN
+F 1 "GND" H 2880 1352 50  0000 C CNN
+F 2 "" H 2875 1525 50  0001 C CNN
+F 3 "" H 2875 1525 50  0001 C CNN
+	1    2875 1525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2875 1525 2875 1450
+NoConn ~ 2175 1350
+Wire Wire Line
+	6275 2525 6675 2525
+Text Label 6675 2525 2    50   ~ 0
+BOOT
+$Comp
+L LED:WS2812B D201
+U 1 1 60F21CE6
+P 8450 4225
+F 0 "D201" H 8750 4025 50  0000 L CNN
+F 1 "LX0707RGB-TR" H 8750 3950 50  0000 L CNN
+F 2 "XasPrints:SMD-LX0707RGB-TR" H 8500 3925 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 8550 3850 50  0001 L TNN
+	1    8450 4225
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR0111
+U 1 1 60F22279
+P 8450 3850
+F 0 "#PWR0111" H 8450 3700 50  0001 C CNN
+F 1 "+BATT" H 8465 4023 50  0000 C CNN
+F 2 "" H 8450 3850 50  0001 C CNN
+F 3 "" H 8450 3850 50  0001 C CNN
+	1    8450 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 3850 8450 3925
+$Comp
+L power:GND #PWR0112
+U 1 1 60F226A2
+P 8450 4575
+F 0 "#PWR0112" H 8450 4325 50  0001 C CNN
+F 1 "GND" H 8455 4402 50  0000 C CNN
+F 2 "" H 8450 4575 50  0001 C CNN
+F 3 "" H 8450 4575 50  0001 C CNN
+	1    8450 4575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 4575 8450 4525
+Text HLabel 9025 4225 2    50   Input ~ 0
+LED_OUT
+Wire Wire Line
+	9025 4225 8750 4225
+Wire Wire Line
+	8150 4225 7625 4225
+Text Label 7625 4225 0    50   ~ 0
+STATE_LED
+$EndSCHEMATC

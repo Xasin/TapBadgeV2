@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name XasParts)(type Legacy)(uri ${KIPRJMOD}/../XasCode/KiCAD/XasParts.lib)(options "")(descr ""))
+  (lib (name MAX86150)(type Legacy)(uri ${KIPRJMOD}/SnapEDA.pretty/MAX86150EFF_T.lib)(options "")(descr ""))
+)

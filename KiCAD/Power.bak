@@ -1,0 +1,387 @@
+EESchema Schematic File Version 4
+LIBS:TapBadgeV2-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Battery_Cell BT301
+U 1 1 60EE69B6
+P 6400 4300
+F 0 "BT301" H 6518 4396 50  0000 L CNN
+F 1 "Battery_Cell" H 6518 4305 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" V 6400 4360 50  0001 C CNN
+F 3 "~" V 6400 4360 50  0001 C CNN
+	1    6400 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L XasParts:BQ25157 BC301
+U 1 1 60EEC5EC
+P 4225 4850
+F 0 "BC301" H 4450 6925 50  0000 C CNN
+F 1 "BQ25157" H 4075 5950 50  0000 C CNN
+F 2 "XasPrints:DSBGA-20" H 4175 4850 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/bq25157.pdf?ts=1626124460223&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FBQ25157" H 4175 4850 50  0001 C CNN
+	1    4225 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3975 4900 4025 4900
+$Comp
+L power:GND #PWR0106
+U 1 1 60EECA56
+P 4025 5150
+F 0 "#PWR0106" H 4025 4900 50  0001 C CNN
+F 1 "GND" H 4030 4977 50  0000 C CNN
+F 2 "" H 4025 5150 50  0001 C CNN
+F 3 "" H 4025 5150 50  0001 C CNN
+	1    4025 5150
+	1    0    0    -1  
+$EndComp
+Connection ~ 4025 4900
+Wire Wire Line
+	4025 4900 4075 4900
+Wire Wire Line
+	4025 5150 4025 5050
+$Comp
+L Device:R_Small R301
+U 1 1 60EECD1D
+P 4775 4700
+F 0 "R301" H 4834 4746 50  0000 L CNN
+F 1 "5k 0402" H 4834 4655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 4775 4700 50  0001 C CNN
+F 3 "~" H 4775 4700 50  0001 C CNN
+	1    4775 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4725 4450 4775 4450
+Wire Wire Line
+	4775 4450 4775 4600
+$Comp
+L Device:C_Small C303
+U 1 1 60EECEDB
+P 5275 4700
+F 0 "C303" H 5367 4746 50  0000 L CNN
+F 1 "2.2uF 0402" H 5367 4655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 5275 4700 50  0001 C CNN
+F 3 "~" H 5275 4700 50  0001 C CNN
+	1    5275 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4725 4350 5275 4350
+Wire Wire Line
+	5275 4350 5275 4600
+Wire Wire Line
+	4725 3750 4725 3850
+Connection ~ 4725 3850
+Wire Wire Line
+	4725 3850 4725 3950
+Connection ~ 4725 3950
+Wire Wire Line
+	4725 3950 4725 4150
+Wire Wire Line
+	4025 5050 4775 5050
+Wire Wire Line
+	4775 5050 4775 4800
+Connection ~ 4025 5050
+Wire Wire Line
+	4025 5050 4025 4900
+Wire Wire Line
+	4775 5050 5275 5050
+Wire Wire Line
+	5275 5050 5275 4800
+Connection ~ 4775 5050
+$Comp
+L Device:C_Small C301
+U 1 1 60EEDD35
+P 5750 4250
+F 0 "C301" H 5842 4296 50  0000 L CNN
+F 1 "2.2uF 0402" H 5842 4205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 5750 4250 50  0001 C CNN
+F 3 "~" H 5750 4250 50  0001 C CNN
+	1    5750 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 4350 5750 4400
+Wire Wire Line
+	5750 4400 6400 4400
+Wire Wire Line
+	6400 4400 6400 5050
+Wire Wire Line
+	6400 5050 5275 5050
+Connection ~ 6400 4400
+Connection ~ 5275 5050
+Wire Wire Line
+	5750 3750 4725 3750
+Connection ~ 4725 3750
+$Comp
+L Device:C_Small C304
+U 1 1 60EEEDFC
+P 7050 4700
+F 0 "C304" H 7142 4746 50  0000 L CNN
+F 1 "2.2uF 0402" H 7142 4655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7050 4700 50  0001 C CNN
+F 3 "~" H 7050 4700 50  0001 C CNN
+	1    7050 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 4800 7050 5050
+Wire Wire Line
+	7050 5050 6400 5050
+Connection ~ 6400 5050
+Wire Wire Line
+	4725 3550 7050 3550
+Wire Wire Line
+	7050 3550 7050 4600
+NoConn ~ 4725 3150
+$Comp
+L Device:C C302
+U 1 1 60EF0B1A
+P 7625 4275
+F 0 "C302" H 7740 4321 50  0000 L CNN
+F 1 "10uF 0603 10V" H 7740 4230 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7663 4125 50  0001 C CNN
+F 3 "~" H 7625 4275 50  0001 C CNN
+	1    7625 4275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7625 4425 7625 5050
+Wire Wire Line
+	7625 5050 7050 5050
+Connection ~ 7050 5050
+Wire Wire Line
+	7625 4125 7625 3300
+Wire Wire Line
+	7625 3300 7050 3300
+Wire Wire Line
+	4725 3400 4725 3300
+Connection ~ 4725 3300
+Wire Wire Line
+	4025 5050 3325 5050
+Wire Wire Line
+	3325 5050 3325 4400
+Wire Wire Line
+	3325 4400 3375 4400
+Text GLabel 3725 2475 1    50   Input ~ 0
+SCL
+Text GLabel 3825 2475 1    50   Input ~ 0
+SDA
+Wire Wire Line
+	3725 2475 3725 2650
+Wire Wire Line
+	3825 2475 3825 2650
+Wire Wire Line
+	5750 3750 5750 4150
+Wire Wire Line
+	6400 3750 6400 4100
+$Comp
+L Switch:SW_Push SW302
+U 1 1 60F0A0DD
+P 2600 4525
+F 0 "SW302" V 2646 4477 50  0000 R CNN
+F 1 "KXT 331 LHS" V 2555 4477 50  0000 R CNN
+F 2 "Button_Switch_SMD:SW_SPST_CK_KXT3" H 2600 4725 50  0001 C CNN
+F 3 "~" H 2600 4725 50  0001 C CNN
+	1    2600 4525
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2600 4725 2600 5050
+Wire Wire Line
+	2600 5050 3325 5050
+Connection ~ 3325 5050
+Wire Wire Line
+	2600 4325 2600 4100
+Wire Wire Line
+	2600 4100 3375 4100
+$Comp
+L XasParts:TPSM828214SILR PW301
+U 1 1 60F11E52
+P 8950 4400
+F 0 "PW301" H 8925 6078 50  0000 C CNN
+F 1 "TPSM828214SILR" H 8925 5987 50  0000 C CNN
+F 2 "XasPrints:uSIP-10" H 8900 4350 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tpsm82821.pdf" H 9000 4450 50  0001 C CNN
+	1    8950 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7625 3300 8450 3300
+Connection ~ 7625 3300
+Wire Wire Line
+	8450 3300 8450 3400
+Connection ~ 8450 3300
+Connection ~ 8450 3400
+Wire Wire Line
+	8450 3400 8450 3500
+Wire Wire Line
+	9400 3600 9400 3500
+Connection ~ 9400 3400
+Wire Wire Line
+	9400 3400 9400 3300
+Connection ~ 9400 3500
+Wire Wire Line
+	9400 3500 9400 3400
+Wire Wire Line
+	8850 4050 9000 4050
+Wire Wire Line
+	8850 4050 8850 5050
+Wire Wire Line
+	8850 5050 7625 5050
+Connection ~ 8850 4050
+Connection ~ 7625 5050
+$Comp
+L Device:C_Small C305
+U 1 1 60F16229
+P 9400 4400
+F 0 "C305" H 9492 4446 50  0000 L CNN
+F 1 "2.2uF 0402" H 9492 4355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9400 4400 50  0001 C CNN
+F 3 "~" H 9400 4400 50  0001 C CNN
+	1    9400 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 3600 9400 4300
+Connection ~ 9400 3600
+Wire Wire Line
+	9400 4500 9400 5050
+Wire Wire Line
+	9400 5050 8850 5050
+Connection ~ 8850 5050
+$Comp
+L power:+3.3V #PWR0107
+U 1 1 60F185E4
+P 9575 3125
+F 0 "#PWR0107" H 9575 2975 50  0001 C CNN
+F 1 "+3.3V" H 9590 3298 50  0000 C CNN
+F 2 "" H 9575 3125 50  0001 C CNN
+F 3 "" H 9575 3125 50  0001 C CNN
+	1    9575 3125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 3300 9575 3300
+Wire Wire Line
+	9575 3300 9575 3125
+Connection ~ 9400 3300
+$Comp
+L power:+3.3V #PWR0108
+U 1 1 60F1915B
+P 4125 2475
+F 0 "#PWR0108" H 4125 2325 50  0001 C CNN
+F 1 "+3.3V" H 4140 2648 50  0000 C CNN
+F 2 "" H 4125 2475 50  0001 C CNN
+F 3 "" H 4125 2475 50  0001 C CNN
+	1    4125 2475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4125 2475 4125 2650
+Text GLabel 7075 3550 2    50   Input ~ 0
+VGLOW
+Wire Wire Line
+	7075 3550 7050 3550
+Connection ~ 7050 3550
+$Comp
+L power:+BATT #PWR0113
+U 1 1 60F0AE95
+P 7050 3150
+F 0 "#PWR0113" H 7050 3000 50  0001 C CNN
+F 1 "+BATT" H 7065 3323 50  0000 C CNN
+F 2 "" H 7050 3150 50  0001 C CNN
+F 3 "" H 7050 3150 50  0001 C CNN
+	1    7050 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 3150 7050 3300
+Connection ~ 7050 3300
+Wire Wire Line
+	7050 3300 4725 3300
+NoConn ~ 8900 2900
+NoConn ~ 4275 2650
+Text HLabel 3975 2475 1    50   Input ~ 0
+PGood
+Wire Wire Line
+	3975 2475 3975 2650
+$Comp
+L XasParts:UJC-HP-3-SMT-TR J301
+U 1 1 60F26A6F
+P 1650 4250
+F 0 "J301" H 1506 5315 50  0000 C CNN
+F 1 "UJC-HP-3-SMT-TR" H 1506 5224 50  0000 C CNN
+F 2 "XasPrints:UJC-HP-3-SMT-TR" H 1550 4150 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/ujc-hp-3-smt-tr.pdf" H 1650 4250 50  0001 C CNN
+	1    1650 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 3500 3375 3500
+Wire Wire Line
+	1750 4000 1750 5050
+Wire Wire Line
+	1750 5050 2600 5050
+Connection ~ 2600 5050
+NoConn ~ 1750 3700
+NoConn ~ 1750 3800
+Wire Wire Line
+	5750 3750 6400 3750
+Connection ~ 5750 3750
+$Comp
+L dk_TVS-Diodes:ESD5Z3_3T1G D301
+U 1 1 60F84AD0
+P 10175 4400
+F 0 "D301" V 10228 4272 60  0000 R CNN
+F 1 "PESD3V3S1UB" V 10122 4272 60  0000 R CNN
+F 2 "digikey-footprints:SOD-523" H 10375 4600 60  0001 L CNN
+F 3 "https://www.onsemi.com/pub/Collateral/ESD5Z2.5T1-D.PDF" H 10375 4700 60  0001 L CNN
+F 4 "ESD5Z3.3T1GOSCT-ND" H 10375 4800 60  0001 L CNN "Digi-Key_PN"
+F 5 "ESD5Z3.3T1G" H 10375 4900 60  0001 L CNN "MPN"
+F 6 "Circuit Protection" H 10375 5000 60  0001 L CNN "Category"
+F 7 "TVS - Diodes" H 10375 5100 60  0001 L CNN "Family"
+F 8 "https://www.onsemi.com/pub/Collateral/ESD5Z2.5T1-D.PDF" H 10375 5200 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/ESD5Z3.3T1G/ESD5Z3.3T1GOSCT-ND/1967044" H 10375 5300 60  0001 L CNN "DK_Detail_Page"
+F 10 "TVS DIODE 3.3V 14.1V SOD523" H 10375 5400 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 10375 5500 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 10375 5600 60  0001 L CNN "Status"
+	1    10175 4400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10175 4600 10175 5050
+Wire Wire Line
+	10175 5050 9400 5050
+Connection ~ 9400 5050
+Wire Wire Line
+	9400 3500 10175 3500
+Wire Wire Line
+	10175 3500 10175 4200
+$Comp
+L Mechanical:Fiducial FID301
+U 1 1 60F97598
+P 6525 3975
+F 0 "FID301" H 6610 4021 50  0000 L CNN
+F 1 "Fiducial" H 6610 3930 50  0000 L CNN
+F 2 "XasPrints:LiPo_150mAh" H 6525 3975 50  0001 C CNN
+F 3 "~" H 6525 3975 50  0001 C CNN
+	1    6525 3975
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

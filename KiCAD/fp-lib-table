@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name XasPrints)(type KiCad)(uri ${KIPRJMOD}/../XasCode/KiCAD/XasPrints.pretty)(options "")(descr ""))
+  (lib (name SOICBite)(type KiCad)(uri ${KIPRJMOD}/SOICBite.pretty)(options "")(descr ""))
+  (lib (name CUI)(type KiCad)(uri ${KIPRJMOD}/CUI.pretty)(options "")(descr ""))
+  (lib (name SnapEDA)(type KiCad)(uri ${KIPRJMOD}/SnapEDA.pretty)(options "")(descr ""))
+)
