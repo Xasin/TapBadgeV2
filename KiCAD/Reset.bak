@@ -1,0 +1,155 @@
+EESchema Schematic File Version 4
+LIBS:TapBadgeV2-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L XasParts:SR1PBBU U?
+U 1 1 61032EC8
+P 4025 4400
+AR Path="/60EE6959/61032EC8" Ref="U?"  Part="1" 
+AR Path="/60EE6959/610325E4/61032EC8" Ref="U409"  Part="1" 
+F 0 "U409" H 4400 4875 50  0000 L CNN
+F 1 "SR1PBBU" H 4400 4775 50  0000 L CNN
+F 2 "XasPrints:UDFN6" H 3925 4300 50  0001 C CNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/9d/b1/7d/3d/f8/69/40/2c/DM00110308.pdf/files/DM00110308.pdf/jcr:content/translations/en.DM00110308.pdf" H 4025 4400 50  0001 C CNN
+	1    4025 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0143
+U 1 1 61032FC5
+P 4025 4425
+F 0 "#PWR0143" H 4025 4175 50  0001 C CNN
+F 1 "GND" H 4030 4252 50  0000 C CNN
+F 2 "" H 4025 4425 50  0001 C CNN
+F 3 "" H 4025 4425 50  0001 C CNN
+	1    4025 4425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4025 4425 4025 4250
+Text HLabel 3400 2775 0    50   Input ~ 0
+Vcc
+Wire Wire Line
+	3400 2775 4025 2775
+Wire Wire Line
+	4025 2775 4025 3350
+$Comp
+L Device:R_Small R403
+U 1 1 6103371F
+P 3175 4100
+F 0 "R403" H 3234 4146 50  0000 L CNN
+F 1 "900k 0402" H 3234 4055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 3175 4100 50  0001 C CNN
+F 3 "~" H 3175 4100 50  0001 C CNN
+	1    3175 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3175 4000 3175 3800
+Connection ~ 3175 3800
+Wire Wire Line
+	3175 3800 3525 3800
+Text HLabel 3175 4350 3    50   Input ~ 0
+BTN_OUT
+Wire Wire Line
+	3175 4350 3175 4200
+$Comp
+L XasParts:74LVC1G74GT-Q100X U408
+U 1 1 61034C91
+P 5800 4250
+F 0 "U408" H 5950 5300 50  0000 C CNN
+F 1 "74LVC1G74GT-Q100X" H 6300 5200 50  0000 C CNN
+F 2 "XasPrints:XSON8" H 5700 4150 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74LVC1G74_Q100.pdf" H 5800 4250 50  0001 C CNN
+	1    5800 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4525 3800 5350 3800
+Wire Wire Line
+	6250 3500 6425 3500
+Wire Wire Line
+	6425 4550 5300 4550
+Wire Wire Line
+	5300 4550 5300 3900
+Wire Wire Line
+	5300 3900 5350 3900
+$Comp
+L power:GND #PWR0144
+U 1 1 61035887
+P 5800 4300
+F 0 "#PWR0144" H 5800 4050 50  0001 C CNN
+F 1 "GND" H 5805 4127 50  0000 C CNN
+F 2 "" H 5800 4300 50  0001 C CNN
+F 3 "" H 5800 4300 50  0001 C CNN
+	1    5800 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3150 5800 3075
+Wire Wire Line
+	5800 2775 4025 2775
+Text HLabel 4800 3500 0    50   Input ~ 0
+OFF
+Text HLabel 6700 3600 2    50   Input ~ 0
+PWR_ON
+Wire Wire Line
+	5350 3600 5275 3600
+Wire Wire Line
+	5275 3600 5275 3075
+Wire Wire Line
+	5275 3075 5800 3075
+Connection ~ 5800 3075
+Wire Wire Line
+	5800 3075 5800 2775
+Connection ~ 4025 2775
+$Comp
+L Switch:SW_Push SW?
+U 1 1 6107AE22
+P 2325 4050
+AR Path="/60EE6959/6107AE22" Ref="SW?"  Part="1" 
+AR Path="/60EE6959/610325E4/6107AE22" Ref="SW401"  Part="1" 
+F 0 "SW401" V 2371 4002 50  0000 R CNN
+F 1 "KXT 331 LHS" V 2280 4002 50  0000 R CNN
+F 2 "Button_Switch_SMD:SW_SPST_CK_KXT3" H 2325 4250 50  0001 C CNN
+F 3 "~" H 2325 4250 50  0001 C CNN
+	1    2325 4050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2325 3850 2325 3800
+Wire Wire Line
+	2325 3800 3175 3800
+$Comp
+L power:GND #PWR0145
+U 1 1 6107B6F2
+P 2325 4425
+F 0 "#PWR0145" H 2325 4175 50  0001 C CNN
+F 1 "GND" H 2330 4252 50  0000 C CNN
+F 2 "" H 2325 4425 50  0001 C CNN
+F 3 "" H 2325 4425 50  0001 C CNN
+	1    2325 4425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2325 4250 2325 4425
+Wire Wire Line
+	6250 3600 6700 3600
+Wire Wire Line
+	6425 3500 6425 4550
+Wire Wire Line
+	4800 3500 5350 3500
+$EndSCHEMATC

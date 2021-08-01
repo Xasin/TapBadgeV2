@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 6
+Sheet 2 7
 Title ""
 Date ""
 Rev ""
@@ -289,4 +289,15 @@ Wire Wire Line
 	8150 4225 7625 4225
 Text Label 7625 4225 0    50   ~ 0
 STATE_LED
+$Comp
+L MCU_ST_STM32L0:STM32L051K8Ux U?
+U 1 1 6106CA64
+P 2500 5100
+F 0 "U?" H 2775 6025 50  0000 C CNN
+F 1 "STM32L051K8Ux" H 3025 5950 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm" H 2000 4200 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00108219.pdf" H 2500 5100 50  0001 C CNN
+	1    2500 5100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

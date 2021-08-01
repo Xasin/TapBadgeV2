@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 7
 Title ""
 Date ""
 Rev ""
@@ -167,19 +167,6 @@ Wire Wire Line
 	7550 5025 7550 4800
 Wire Wire Line
 	7550 4800 7825 4800
-$Comp
-L power:+BATT #PWR0136
-U 1 1 60F9587F
-P 6750 4225
-F 0 "#PWR0136" H 6750 4075 50  0001 C CNN
-F 1 "+BATT" H 6765 4398 50  0000 C CNN
-F 2 "" H 6750 4225 50  0001 C CNN
-F 3 "" H 6750 4225 50  0001 C CNN
-	1    6750 4225
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6750 4225 6750 4375
 Wire Wire Line
 	6750 4475 6700 4475
 Wire Wire Line
@@ -315,8 +302,6 @@ Wire Wire Line
 Connection ~ 2400 4675
 Wire Wire Line
 	2400 4675 2450 4675
-Text GLabel 2400 4575 1    50   Input ~ 0
-VGLOW
 $Comp
 L Device:C_Small C?
 U 1 1 60FB3667
@@ -416,4 +401,19 @@ U 61017570
 F0 "OLED Panel" 50
 F1 "OLED_Panel.sch" 50
 $EndSheet
+$Comp
+L power:+5V #PWR0108
+U 1 1 610BED46
+P 6750 4225
+F 0 "#PWR0108" H 6750 4075 50  0001 C CNN
+F 1 "+5V" H 6765 4398 50  0000 C CNN
+F 2 "" H 6750 4225 50  0001 C CNN
+F 3 "" H 6750 4225 50  0001 C CNN
+	1    6750 4225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 4225 6750 4375
+Text GLabel 2400 4575 1    50   Input ~ 0
+VGLOW
 $EndSCHEMATC
