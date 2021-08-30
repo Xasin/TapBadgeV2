@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 7
+Sheet 3 6
 Title ""
 Date ""
 Rev ""
@@ -60,12 +60,12 @@ Connection ~ 4550 4450
 $Comp
 L Device:C_Small C304
 U 1 1 60EEEDFC
-P 7575 6075
-F 0 "C304" H 7667 6121 50  0000 L CNN
-F 1 "2.2uF 0402" H 7667 6030 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 7575 6075 50  0001 C CNN
-F 3 "~" H 7575 6075 50  0001 C CNN
-	1    7575 6075
+P 7075 2050
+F 0 "C304" H 7167 2096 50  0000 L CNN
+F 1 "2.2uF 0402" H 7167 2005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7075 2050 50  0001 C CNN
+F 3 "~" H 7075 2050 50  0001 C CNN
+	1    7075 2050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -113,7 +113,7 @@ L Device:C_Small C305
 U 1 1 60F16229
 P 7125 4450
 F 0 "C305" H 7217 4496 50  0000 L CNN
-F 1 "2.2uF 0402" H 7217 4405 50  0000 L CNN
+F 1 "0.1uF 0402" H 7217 4405 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 7125 4450 50  0001 C CNN
 F 3 "~" H 7125 4450 50  0001 C CNN
 	1    7125 4450
@@ -151,25 +151,6 @@ F 3 "" H 7125 1650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 6375 2950
-Text HLabel 925  950  1    50   Input ~ 0
-PGood
-Wire Wire Line
-	925  950  925  1125
-$Comp
-L XasParts:UJC-HP-3-SMT-TR J301
-U 1 1 60F26A6F
-P 1125 4300
-F 0 "J301" H 981 5365 50  0000 C CNN
-F 1 "UJC-HP-3-SMT-TR" H 981 5274 50  0000 C CNN
-F 2 "XasPrints:UJC-HP-3-SMT-TR" H 1025 4200 50  0001 C CNN
-F 3 "https://www.cuidevices.com/product/resource/ujc-hp-3-smt-tr.pdf" H 1125 4300 50  0001 C CNN
-	1    1125 4300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1225 4050 1225 5100
-NoConn ~ 1225 3750
-NoConn ~ 1225 3850
 Wire Wire Line
 	3900 3900 4550 3900
 $Comp
@@ -196,16 +177,6 @@ Wire Wire Line
 	7775 4650 7775 5100
 Wire Wire Line
 	7775 3550 7775 4250
-$Sheet
-S 2350 1200 1175 625 
-U 610325E4
-F0 "Reset control logic" 50
-F1 "Reset.sch" 50
-F2 "Vcc" I L 2350 1325 50 
-F3 "BTN_OUT" I R 3525 1325 50 
-F4 "OFF" I L 2350 1500 50 
-F5 "PWR_ON" I R 3525 1500 50 
-$EndSheet
 $Comp
 L XasParts:BQ24232 CH301
 U 1 1 6104F665
@@ -276,8 +247,6 @@ Wire Wire Line
 	5725 3350 5725 3550
 Connection ~ 3575 3550
 NoConn ~ 2375 3200
-Wire Wire Line
-	1225 3550 1575 3550
 $Comp
 L Device:C_Small C303
 U 1 1 6106B1C4
@@ -294,13 +263,9 @@ F 3 "~" H 1575 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1225 5100 1575 5100
-Wire Wire Line
 	1575 4550 1575 5100
-Connection ~ 1575 5100
 Wire Wire Line
 	1575 4350 1575 3550
-Connection ~ 1575 3550
 NoConn ~ 2375 3300
 NoConn ~ 2375 3400
 $Comp
@@ -322,16 +287,6 @@ Wire Wire Line
 Wire Wire Line
 	2025 4100 2375 4100
 Wire Wire Line
-	2025 1250 2025 1325
-Wire Wire Line
-	2025 1325 2350 1325
-Wire Wire Line
-	3525 1500 4125 1500
-Text Label 4125 1500 2    50   ~ 0
-MAIN_PWR_ON
-Text Label 5900 4050 1    50   ~ 0
-MAIN_PWR_ON
-Wire Wire Line
 	5275 4150 5275 3550
 Connection ~ 5275 3550
 Wire Wire Line
@@ -349,7 +304,7 @@ Wire Wire Line
 Wire Wire Line
 	5925 3550 5900 3550
 Wire Wire Line
-	5900 3550 5900 4050
+	5900 3550 5900 3625
 Connection ~ 7125 5100
 Wire Wire Line
 	7125 5100 7775 5100
@@ -375,8 +330,6 @@ Wire Wire Line
 	1575 5100 2025 5100
 Wire Wire Line
 	2475 5100 2925 5100
-Wire Wire Line
-	4200 5100 4550 5100
 Wire Wire Line
 	3675 5100 4550 5100
 $Comp
@@ -418,7 +371,7 @@ Wire Wire Line
 	4550 1725 4550 3900
 Connection ~ 4550 3900
 Wire Wire Line
-	6825 1825 7325 1825
+	6825 1825 7075 1825
 $Comp
 L power:+5V #PWR0142
 U 1 1 610BA434
@@ -436,44 +389,101 @@ Wire Wire Line
 	7125 1725 7125 1650
 Connection ~ 5725 3350
 $Comp
-L power:+5V #PWR0128
-U 1 1 6110BDC6
-P 2025 1250
-F 0 "#PWR0128" H 2025 1100 50  0001 C CNN
-F 1 "+5V" H 2040 1423 50  0000 C CNN
-F 2 "" H 2025 1250 50  0001 C CNN
-F 3 "" H 2025 1250 50  0001 C CNN
-	1    2025 1250
+L Graphic:SYM_Hot_Small BAT301
+U 1 1 610A5342
+P 4875 4700
+F 0 "BAT301" H 4875 4840 50  0001 C CNN
+F 1 "SYM_Hot_Small" H 4875 4575 50  0001 C CNN
+F 2 "XasPrints:LiPo_150mAh" H 4875 4525 50  0001 C CNN
+F 3 "~" H 4905 4500 50  0001 C CNN
+	1    4875 4700
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	7075 1950 7075 1825
+Connection ~ 7075 1825
+Wire Wire Line
+	7075 1825 7325 1825
 $Comp
-L Device:R_Small R?
-U 1 1 6110DFEC
-P 5625 1300
-F 0 "R?" H 5684 1346 50  0000 L CNN
-F 1 "R_Small" H 5684 1255 50  0000 L CNN
-F 2 "" H 5625 1300 50  0001 C CNN
-F 3 "~" H 5625 1300 50  0001 C CNN
-	1    5625 1300
+L power:GND #PWR0149
+U 1 1 61125641
+P 7075 2250
+F 0 "#PWR0149" H 7075 2000 50  0001 C CNN
+F 1 "GND" H 7080 2077 50  0000 C CNN
+F 2 "" H 7075 2250 50  0001 C CNN
+F 3 "" H 7075 2250 50  0001 C CNN
+	1    7075 2250
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	7075 2250 7075 2150
+Text GLabel 4550 1675 1    50   Input ~ 0
+RAW_BAT
+Wire Wire Line
+	4550 1675 4550 1725
+Connection ~ 4550 1725
 $Comp
-L Device:R_Small R?
-U 1 1 6110E052
-P 5175 1300
-F 0 "R?" H 5234 1346 50  0000 L CNN
-F 1 "R_Small" H 5234 1255 50  0000 L CNN
-F 2 "" H 5175 1300 50  0001 C CNN
-F 3 "~" H 5175 1300 50  0001 C CNN
-	1    5175 1300
+L Connector:USB_C_Receptacle_USB2.0 J301
+U 1 1 611F4AA2
+P 1175 2150
+F 0 "J301" H 1280 3017 50  0000 C CNN
+F 1 "USB4105-GF-A" H 1280 2926 50  0000 C CNN
+F 2 "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12" H 1325 2150 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1325 2150 50  0001 C CNN
+	1    1175 2150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5925 1425 5625 1425
+	5925 1425 5675 1425
+Text GLabel 5675 1425 0    50   Input ~ 0
+BAT_ON
+Text GLabel 5675 1525 0    50   Input ~ 0
+GLOW_ON
 Wire Wire Line
-	5625 1425 5625 1400
+	5675 1525 5925 1525
+Text GLabel 2025 2050 2    50   Input ~ 0
+USB_DM
 Wire Wire Line
-	5925 1525 5175 1525
+	2025 2050 1775 2050
 Wire Wire Line
-	5175 1525 5175 1400
+	1775 2050 1775 2150
+Connection ~ 1775 2050
+Text GLabel 2025 2250 2    50   Input ~ 0
+USB_DP
+Wire Wire Line
+	2025 2250 1775 2250
+Wire Wire Line
+	1775 2250 1775 2350
+Connection ~ 1775 2250
+Wire Wire Line
+	875  3050 1175 3050
+$Comp
+L power:GND #PWR0153
+U 1 1 61283021
+P 1175 3175
+F 0 "#PWR0153" H 1175 2925 50  0001 C CNN
+F 1 "GND" H 1180 3002 50  0000 C CNN
+F 2 "" H 1175 3175 50  0001 C CNN
+F 3 "" H 1175 3175 50  0001 C CNN
+	1    1175 3175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1175 3175 1175 3050
+Connection ~ 1175 3050
+NoConn ~ 1775 2650
+NoConn ~ 1775 2750
+NoConn ~ 1775 1850
+NoConn ~ 1775 1750
+Text GLabel 2025 1550 2    50   Input ~ 0
+VUSB
+Wire Wire Line
+	2025 1550 1775 1550
+Text GLabel 1400 3550 0    50   Input ~ 0
+VUSB
+Wire Wire Line
+	1400 3550 1575 3550
+Connection ~ 1575 3550
+Text GLabel 5900 3625 3    50   Input ~ 0
+MAIN_PWR_ON
 $EndSCHEMATC

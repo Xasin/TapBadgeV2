@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 7
+Sheet 5 6
 Title ""
 Date ""
 Rev ""
@@ -250,4 +250,19 @@ Wire Wire Line
 	5200 3475 5325 3475
 Wire Wire Line
 	5200 3375 5325 3375
+$Comp
+L power:+BATT #PWR?
+U 1 1 611DA85E
+P 5775 2625
+AR Path="/60EE6959/611DA85E" Ref="#PWR?"  Part="1" 
+AR Path="/61017570/611DA85E" Ref="#PWR0152"  Part="1" 
+F 0 "#PWR0152" H 5775 2475 50  0001 C CNN
+F 1 "+BATT" H 5790 2798 50  0000 C CNN
+F 2 "" H 5775 2625 50  0001 C CNN
+F 3 "" H 5775 2625 50  0001 C CNN
+	1    5775 2625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5775 2775 5775 2625
 $EndSCHEMATC

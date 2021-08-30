@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 7
+Sheet 4 6
 Title ""
 Date ""
 Rev ""
@@ -278,23 +278,23 @@ Wire Wire Line
 $Comp
 L LED:WS2812B D401
 U 1 1 60F3BC6A
-P 3500 850
-F 0 "D401" H 3841 896 50  0000 L CNN
-F 1 "WS2812B" H 3841 805 50  0000 L CNN
-F 2 "XasPrints:SMD-LX0707RGB-TR" H 3550 550 50  0001 L TNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3600 475 50  0001 L TNN
-	1    3500 850 
+P 5300 1025
+F 0 "D401" H 5641 1071 50  0000 L CNN
+F 1 "WS2812B" H 5550 850 50  0000 L CNN
+F 2 "XasPrints:SMD-LX0707RGB-TR" H 5350 725 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 5400 650 50  0001 L TNN
+	1    5300 1025
 	1    0    0    -1  
 $EndComp
 $Comp
 L LED:WS2812B D402
 U 1 1 60F4C75F
-P 6175 1275
-F 0 "D402" H 6516 1321 50  0000 L CNN
-F 1 "WS2812B" H 6516 1230 50  0000 L CNN
-F 2 "XasPrints:SMD-LX0707RGB-TR" H 6225 975 50  0001 L TNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 6275 900 50  0001 L TNN
-	1    6175 1275
+P 7400 1025
+F 0 "D402" H 7500 1250 50  0000 L CNN
+F 1 "WS2812B" H 7675 925 50  0000 L CNN
+F 2 "XasPrints:SMD-LX0707RGB-TR" H 7450 725 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7500 650 50  0001 L TNN
+	1    7400 1025
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -339,23 +339,23 @@ $EndComp
 $Comp
 L LED:WS2812B D403
 U 1 1 60F50157
-P 8250 1000
-F 0 "D403" H 8591 1046 50  0000 L CNN
-F 1 "WS2812B" H 8591 955 50  0000 L CNN
-F 2 "XasPrints:SMD-LX0707RGB-TR" H 8300 700 50  0001 L TNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 8350 625 50  0001 L TNN
-	1    8250 1000
+P 6350 1025
+F 0 "D403" H 6691 1071 50  0000 L CNN
+F 1 "WS2812B" H 6691 980 50  0000 L CNN
+F 2 "XasPrints:SMD-LX0707RGB-TR" H 6400 725 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 6450 650 50  0001 L TNN
+	1    6350 1025
 	1    0    0    -1  
 $EndComp
 $Comp
 L LED:WS2812B D404
 U 1 1 60F5023D
-P 6325 5725
-F 0 "D404" H 6666 5771 50  0000 L CNN
-F 1 "WS2812B" H 6666 5680 50  0000 L CNN
-F 2 "XasPrints:SMD-LX0707RGB-TR" H 6375 5425 50  0001 L TNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 6425 5350 50  0001 L TNN
-	1    6325 5725
+P 4375 1025
+F 0 "D404" H 4716 1071 50  0000 L CNN
+F 1 "WS2812B" H 4716 980 50  0000 L CNN
+F 2 "XasPrints:SMD-LX0707RGB-TR" H 4425 725 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4475 650 50  0001 L TNN
+	1    4375 1025
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -403,23 +403,23 @@ $EndComp
 $Comp
 L LED:WS2812B D406
 U 1 1 60F5FA46
-P 9925 2675
-F 0 "D406" H 10266 2721 50  0000 L CNN
-F 1 "WS2812B" H 10266 2630 50  0000 L CNN
-F 2 "XasPrints:SMD-LX0707RGB-TR" H 9975 2375 50  0001 L TNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 10025 2300 50  0001 L TNN
-	1    9925 2675
+P 8475 1025
+F 0 "D406" H 8725 1325 50  0000 L CNN
+F 1 "WS2812B" H 8775 850 50  0000 L CNN
+F 2 "XasPrints:SMD-LX0707RGB-TR" H 8525 725 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 8575 650 50  0001 L TNN
+	1    8475 1025
 	1    0    0    -1  
 $EndComp
 $Comp
 L LED:WS2812B D407
 U 1 1 60F5FD07
-P 3850 4825
-F 0 "D407" H 4191 4871 50  0000 L CNN
-F 1 "WS2812B" H 4191 4780 50  0000 L CNN
-F 2 "XasPrints:SMD-LX0707RGB-TR" H 3900 4525 50  0001 L TNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3950 4450 50  0001 L TNN
-	1    3850 4825
+P 3450 1025
+F 0 "D407" H 3791 1071 50  0000 L CNN
+F 1 "WS2812B" H 3791 980 50  0000 L CNN
+F 2 "XasPrints:SMD-LX0707RGB-TR" H 3500 725 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3550 650 50  0001 L TNN
+	1    3450 1025
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -649,9 +649,9 @@ Wire Wire Line
 	6125 7575 6125 7475
 Connection ~ 6125 7475
 Text GLabel 5450 6775 0    50   Input ~ 0
-MIC_LR
+AUDIO_LRCK
 Text GLabel 5450 6875 0    50   Input ~ 0
-MIC_SCK
+AUDIO_BCK
 Text GLabel 5450 6975 0    50   Input ~ 0
 MIC_DATA
 Wire Wire Line
@@ -886,17 +886,6 @@ F 3 "~" H 2800 6750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2800 6850 2800 6950
-$Comp
-L power:+3.3V #PWR0134
-U 1 1 6105D69A
-P 2800 6575
-F 0 "#PWR0134" H 2800 6425 50  0001 C CNN
-F 1 "+3.3V" H 2815 6748 50  0000 C CNN
-F 2 "" H 2800 6575 50  0001 C CNN
-F 3 "" H 2800 6575 50  0001 C CNN
-	1    2800 6575
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2800 6575 2800 6650
 $Comp
@@ -970,4 +959,72 @@ F 3 "" H 11150 3375 50  0001 C CNN
 	1    11150 3375
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3750 1025 4075 1025
+Wire Wire Line
+	4675 1025 5000 1025
+Wire Wire Line
+	5600 1025 6050 1025
+Wire Wire Line
+	6650 1025 7100 1025
+Wire Wire Line
+	7700 1025 8175 1025
+Wire Wire Line
+	3450 725  4375 725 
+Connection ~ 4375 725 
+Wire Wire Line
+	4375 725  5300 725 
+Connection ~ 5300 725 
+Wire Wire Line
+	5300 725  6350 725 
+Connection ~ 6350 725 
+Wire Wire Line
+	6350 725  7400 725 
+Connection ~ 7400 725 
+Wire Wire Line
+	7400 725  8475 725 
+Wire Wire Line
+	8475 1325 7400 1325
+Connection ~ 4375 1325
+Wire Wire Line
+	4375 1325 3450 1325
+Connection ~ 5300 1325
+Wire Wire Line
+	5300 1325 4375 1325
+Connection ~ 6350 1325
+Wire Wire Line
+	6350 1325 5300 1325
+Connection ~ 7400 1325
+Wire Wire Line
+	7400 1325 6350 1325
+$Comp
+L power:GND #PWR0145
+U 1 1 6110EA34
+P 6350 1400
+F 0 "#PWR0145" H 6350 1150 50  0001 C CNN
+F 1 "GND" H 6355 1227 50  0000 C CNN
+F 2 "" H 6350 1400 50  0001 C CNN
+F 3 "" H 6350 1400 50  0001 C CNN
+	1    6350 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 1400 6350 1325
+Text GLabel 3400 600  0    50   Input ~ 0
+VGLOW
+Wire Wire Line
+	3400 600  3450 600 
+Wire Wire Line
+	3450 600  3450 725 
+Connection ~ 3450 725 
+Text HLabel 2925 1025 0    50   Input ~ 0
+LED_IN
+Wire Wire Line
+	2925 1025 3150 1025
+Text GLabel 2800 6575 1    50   Input ~ 0
+RAW_BAT
+Text HLabel 9100 1025 2    50   Input ~ 0
+LED_OUT
+Wire Wire Line
+	9100 1025 8775 1025
 $EndSCHEMATC
