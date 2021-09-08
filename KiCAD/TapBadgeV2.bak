@@ -19,6 +19,7 @@ S 3725 1825 1925 1300
 U 60EDF44C
 F0 "Core Schematic" 50
 F1 "ESP_Core.sch" 50
+F2 "LED_OUT" I R 5650 2050 50 
 $EndSheet
 $Sheet
 S 875  1650 1400 1300
@@ -79,10 +80,12 @@ Wire Wire Line
 Wire Wire Line
 	8100 4375 8100 4525
 $Sheet
-S 6650 1825 1900 1300
+S 5975 1800 1900 1300
 U 60F2BC2A
 F0 "Sensors" 50
 F1 "Sensors.sch" 50
+F2 "LED_IN" I L 5975 2050 50 
+F3 "LED_OUT" I R 7875 2050 50 
 $EndSheet
 $Comp
 L Device:Speaker LS101
@@ -167,19 +170,6 @@ Wire Wire Line
 	7550 5025 7550 4800
 Wire Wire Line
 	7550 4800 7825 4800
-$Comp
-L power:+BATT #PWR0136
-U 1 1 60F9587F
-P 6750 4225
-F 0 "#PWR0136" H 6750 4075 50  0001 C CNN
-F 1 "+BATT" H 6765 4398 50  0000 C CNN
-F 2 "" H 6750 4225 50  0001 C CNN
-F 3 "" H 6750 4225 50  0001 C CNN
-	1    6750 4225
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6750 4225 6750 4375
 Wire Wire Line
 	6750 4475 6700 4475
 Wire Wire Line
@@ -242,17 +232,6 @@ F 3 "~" H 1775 7175 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:Fiducial FID103
-U 1 1 60F99347
-P 1200 7400
-F 0 "FID103" H 1285 7446 50  0000 L CNN
-F 1 "Fiducial" H 1285 7355 50  0000 L CNN
-F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 1200 7400 50  0001 C CNN
-F 3 "~" H 1200 7400 50  0001 C CNN
-	1    1200 7400
-	1    0    0    -1  
-$EndComp
-$Comp
 L Mechanical:Fiducial FID104
 U 1 1 60F9939B
 P 1775 7400
@@ -263,12 +242,6 @@ F 3 "~" H 1775 7400 50  0001 C CNN
 	1    1775 7400
 	1    0    0    -1  
 $EndComp
-$Sheet
-S 9750 3125 1275 850 
-U 60F9A292
-F0 "Ring 'o LEDs" 50
-F1 "RingOfLED.sch" 50
-$EndSheet
 $Comp
 L XasParts:MAX98357A AMP101
 U 1 1 60FAC435
@@ -315,8 +288,6 @@ Wire Wire Line
 Connection ~ 2400 4675
 Wire Wire Line
 	2400 4675 2450 4675
-Text GLabel 2400 4575 1    50   Input ~ 0
-VGLOW
 $Comp
 L Device:C_Small C?
 U 1 1 60FB3667
@@ -325,8 +296,8 @@ AR Path="/60EE6959/60FB3667" Ref="C?"  Part="1"
 AR Path="/60F2BC2A/60FB3667" Ref="C?"  Part="1" 
 AR Path="/60FB3667" Ref="C103"  Part="1" 
 F 0 "C103" H 1742 4846 50  0000 L CNN
-F 1 "10uF 0402" V 1600 4850 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 1650 4800 50  0001 C CNN
+F 1 "10uF 0603" V 1600 4850 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1650 4800 50  0001 C CNN
 F 3 "~" H 1650 4800 50  0001 C CNN
 	1    1650 4800
 	1    0    0    -1  
@@ -372,9 +343,9 @@ Connection ~ 1775 4900
 Wire Wire Line
 	1775 4900 1925 4900
 Text GLabel 1750 5425 0    50   Input ~ 0
-SPKR_LRCK
+AUDIO_LRCK
 Text GLabel 1750 5525 0    50   Input ~ 0
-SPKR_BCK
+AUDIO_BCK
 Text GLabel 1750 5625 0    50   Input ~ 0
 SPKR_DATA
 Wire Wire Line
@@ -399,21 +370,113 @@ Wire Wire Line
 	6075 5125 6200 5125
 Wire Wire Line
 	6075 5025 6200 5025
-$Comp
-L Mechanical:Fiducial FID105
-U 1 1 60FF59E3
-P 4525 6125
-F 0 "FID105" H 4610 6171 50  0000 L CNN
-F 1 "Fiducial" H 4610 6080 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 4525 6125 50  0001 C CNN
-F 3 "~" H 4525 6125 50  0001 C CNN
-	1    4525 6125
-	1    0    0    -1  
-$EndComp
 $Sheet
-S 7925 900  1100 650 
+S 4125 750  1100 650 
 U 61017570
 F0 "OLED Panel" 50
 F1 "OLED_Panel.sch" 50
 $EndSheet
+$Comp
+L power:+5V #PWR0108
+U 1 1 610BED46
+P 6750 4225
+F 0 "#PWR0108" H 6750 4075 50  0001 C CNN
+F 1 "+5V" H 6765 4398 50  0000 C CNN
+F 2 "" H 6750 4225 50  0001 C CNN
+F 3 "" H 6750 4225 50  0001 C CNN
+	1    6750 4225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 4225 6750 4375
+Text GLabel 2400 4575 1    50   Input ~ 0
+VGLOW
+$Comp
+L Mechanical:MountingHole_Pad H102
+U 1 1 6109C258
+P 3900 6850
+F 0 "H102" H 4000 6901 50  0000 L CNN
+F 1 "MountingHole_Pad" H 4000 6810 50  0000 L CNN
+F 2 "XasPrints:MountingHole_1.5mm_M1_Pad_Via" H 3900 6850 50  0001 C CNN
+F 3 "~" H 3900 6850 50  0001 C CNN
+	1    3900 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H101
+U 1 1 6109C6EA
+P 3525 6850
+F 0 "H101" H 3625 6901 50  0000 L CNN
+F 1 "MountingHole_Pad" H 3625 6810 50  0000 L CNN
+F 2 "XasPrints:MountingHole_1.5mm_M1_Pad_Via" H 3525 6850 50  0001 C CNN
+F 3 "~" H 3525 6850 50  0001 C CNN
+	1    3525 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H103
+U 1 1 610C5CB3
+P 3025 6850
+F 0 "H103" H 3125 6901 50  0000 L CNN
+F 1 "MountingHole_Pad" H 3125 6810 50  0000 L CNN
+F 2 "XasPrints:MountingHole_1.5mm_M1_Pad_Via" H 3025 6850 50  0001 C CNN
+F 3 "~" H 3025 6850 50  0001 C CNN
+	1    3025 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2050 5975 2050
+$Sheet
+S 8425 1825 1275 850 
+U 60F9A292
+F0 "Ring 'o LEDs" 50
+F1 "RingOfLED.sch" 50
+F2 "LED_IN" I L 8425 2050 50 
+F3 "LED_OUT" I R 9700 2050 50 
+$EndSheet
+Wire Wire Line
+	6200 5900 6750 5900
+Wire Wire Line
+	6200 5375 6200 5900
+Wire Wire Line
+	7875 2050 8425 2050
+Wire Wire Line
+	3025 6950 3025 7025
+Wire Wire Line
+	3025 7025 3525 7025
+Wire Wire Line
+	3900 7025 3900 6950
+Wire Wire Line
+	3525 6950 3525 7025
+Connection ~ 3525 7025
+Wire Wire Line
+	3525 7025 3900 7025
+$Comp
+L power:GND #PWR0154
+U 1 1 6136A261
+P 3525 7100
+F 0 "#PWR0154" H 3525 6850 50  0001 C CNN
+F 1 "GND" H 3530 6927 50  0000 C CNN
+F 2 "" H 3525 7100 50  0001 C CNN
+F 3 "" H 3525 7100 50  0001 C CNN
+	1    3525 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3525 7100 3525 7025
+$Comp
+L power:+5V #PWR0157
+U 1 1 613C2046
+P 6100 4800
+F 0 "#PWR0157" H 6100 4650 50  0001 C CNN
+F 1 "+5V" H 6115 4973 50  0000 C CNN
+F 2 "" H 6100 4800 50  0001 C CNN
+F 3 "" H 6100 4800 50  0001 C CNN
+	1    6100 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 4800 6100 4825
+Wire Wire Line
+	6100 4825 6200 4825
 $EndSCHEMATC
