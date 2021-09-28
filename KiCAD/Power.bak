@@ -303,8 +303,6 @@ Wire Wire Line
 	6325 5100 7125 5100
 Wire Wire Line
 	5925 3550 5900 3550
-Wire Wire Line
-	5900 3550 5900 3625
 Connection ~ 7125 5100
 Wire Wire Line
 	7125 5100 7775 5100
@@ -366,8 +364,6 @@ Wire Wire Line
 Wire Wire Line
 	5275 1825 5275 3550
 Wire Wire Line
-	5925 1725 4550 1725
-Wire Wire Line
 	4550 1725 4550 3900
 Connection ~ 4550 3900
 Wire Wire Line
@@ -383,8 +379,6 @@ F 3 "" H 5725 3350 50  0001 C CNN
 	1    5725 3350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6825 1725 7125 1725
 Wire Wire Line
 	7125 1725 7125 1650
 Connection ~ 5725 3350
@@ -433,9 +427,7 @@ F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1325 21
 	1    1175 2150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5925 1425 5675 1425
-Text GLabel 5675 1425 0    50   Input ~ 0
+Text GLabel 4775 1050 0    50   Input ~ 0
 BAT_ON
 Text GLabel 5675 1525 0    50   Input ~ 0
 GLOW_ON
@@ -484,6 +476,95 @@ VUSB
 Wire Wire Line
 	1400 3550 1575 3550
 Connection ~ 1575 3550
-Text GLabel 5900 3625 3    50   Input ~ 0
+Text GLabel 5575 5600 0    50   Input ~ 0
 MAIN_PWR_ON
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP302
+U 1 1 613FBF68
+P 5900 5600
+F 0 "JP302" H 5900 5712 50  0000 C CNN
+F 1 "SolderJumper_3_Bridged12" H 5900 5803 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5900 5600 50  0001 C CNN
+F 3 "~" H 5900 5600 50  0001 C CNN
+	1    5900 5600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5575 5600 5700 5600
+Wire Wire Line
+	5900 3550 5900 5450
+$Comp
+L power:+5V #PWR0158
+U 1 1 61401BC7
+P 6150 5600
+F 0 "#PWR0158" H 6150 5450 50  0001 C CNN
+F 1 "+5V" H 6165 5773 50  0000 C CNN
+F 2 "" H 6150 5600 50  0001 C CNN
+F 3 "" H 6150 5600 50  0001 C CNN
+	1    6150 5600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6150 5600 6100 5600
+$Comp
+L Connector:TestPoint TP301
+U 1 1 6147631B
+P 1575 3475
+F 0 "TP301" H 1633 3595 50  0000 L CNN
+F 1 "TestPoint" H 1633 3504 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x01_P1.27mm_Vertical" H 1775 3475 50  0001 C CNN
+F 3 "~" H 1775 3475 50  0001 C CNN
+	1    1575 3475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1575 3475 1575 3550
+Text GLabel 3750 3300 2    50   Input ~ 0
+~VUSB_PRESENT
+Text GLabel 3750 3175 2    50   Input ~ 0
+~CHG
+Wire Wire Line
+	3750 3175 3675 3175
+Wire Wire Line
+	3675 3175 3675 3200
+Wire Wire Line
+	3675 3200 3575 3200
+Wire Wire Line
+	3750 3300 3575 3300
+Wire Wire Line
+	4550 1725 5925 1725
+Wire Wire Line
+	6825 1725 7125 1725
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP303
+U 1 1 61427A8C
+P 5100 1050
+F 0 "JP303" H 5100 1162 50  0000 C CNN
+F 1 "SolderJumper_3_Bridged12" H 5100 1253 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5100 1050 50  0001 C CNN
+F 3 "~" H 5100 1050 50  0001 C CNN
+	1    5100 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4775 1050 4900 1050
+Wire Wire Line
+	5100 1200 5100 1425
+Wire Wire Line
+	5100 1425 5925 1425
+Wire Wire Line
+	5300 1050 5775 1050
+Wire Wire Line
+	5775 1050 5775 950 
+$Comp
+L power:+3.3V #PWR0163
+U 1 1 6142FA47
+P 5775 950
+F 0 "#PWR0163" H 5775 800 50  0001 C CNN
+F 1 "+3.3V" H 5790 1123 50  0000 C CNN
+F 2 "" H 5775 950 50  0001 C CNN
+F 3 "" H 5775 950 50  0001 C CNN
+	1    5775 950 
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -267,10 +267,6 @@ Text HLabel 9025 4225 2    50   Input ~ 0
 LED_OUT
 Wire Wire Line
 	9025 4225 8750 4225
-Wire Wire Line
-	8150 4225 7625 4225
-Text Label 7625 4225 0    50   ~ 0
-STATE_LED
 $Comp
 L XasParts:AP7354-33FS4 PW201
 U 1 1 610CF8A7
@@ -492,29 +488,25 @@ $EndComp
 Text GLabel 6675 3825 2    50   Input ~ 0
 AUDIO_BCK
 Wire Wire Line
-	6275 2525 6875 2525
+	6275 2525 6675 2525
 Text GLabel 6675 4025 2    50   Input ~ 0
 SPKR_DATA
-Text GLabel 6675 4125 2    50   Input ~ 0
+Text GLabel 6675 4325 2    50   Input ~ 0
 AUDIO_LRCK
-Text GLabel 6675 3925 2    50   Input ~ 0
+Text GLabel 6675 3325 2    50   Input ~ 0
 MIC_DATA
-Wire Wire Line
-	6675 4125 6275 4125
 Wire Wire Line
 	6675 4025 6275 4025
 Wire Wire Line
 	6675 3825 6275 3825
 Wire Wire Line
 	6675 3925 6275 3925
-Text GLabel 6675 3325 2    50   Input ~ 0
+Text GLabel 6675 3925 2    50   Input ~ 0
 SDA
 Text GLabel 6675 3525 2    50   Input ~ 0
 SCL
 Wire Wire Line
 	6675 3525 6275 3525
-Wire Wire Line
-	6275 3325 6675 3325
 Wire Wire Line
 	3875 4775 3875 4800
 $Comp
@@ -581,7 +573,7 @@ Wire Wire Line
 	1900 5100 1500 5100
 Wire Wire Line
 	1900 5200 1500 5200
-Text GLabel 1500 5100 0    50   Input ~ 0
+Text GLabel 5300 6775 3    50   Input ~ 0
 GLOW_ON
 Text GLabel 1500 5200 0    50   Input ~ 0
 BAT_ON
@@ -613,9 +605,7 @@ Wire Wire Line
 	6275 3025 6675 3025
 Text GLabel 6675 3025 2    50   Input ~ 0
 IR_TX
-Wire Wire Line
-	6275 3725 6675 3725
-Text GLabel 6675 3725 2    50   Input ~ 0
+Text GLabel 6675 4425 2    50   Input ~ 0
 IR_RX
 Wire Wire Line
 	2500 4500 2400 4500
@@ -657,8 +647,176 @@ Text Label 2275 1350 0    50   ~ 0
 STM_RST
 Wire Wire Line
 	2175 1350 2275 1350
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP?
+U 1 1 614128B8
+P 5300 6550
+AR Path="/60EE6959/614128B8" Ref="JP?"  Part="1" 
+AR Path="/60EDF44C/614128B8" Ref="JP201"  Part="1" 
+F 0 "JP201" H 5300 6755 50  0000 C CNN
+F 1 "SolderJumper_3_Bridged12" H 5300 6664 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5300 6550 50  0001 C CNN
+F 3 "~" H 5300 6550 50  0001 C CNN
+	1    5300 6550
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	6275 4225 6675 4225
-Text Label 6675 4225 0    50   ~ 0
-STATE_LED
+	5300 6775 5300 6700
+Wire Wire Line
+	5100 6550 4625 6550
+Text Label 4625 6550 0    50   ~ 0
+STM_GLOW
+Text Label 1500 5100 0    50   ~ 0
+STM_GLOW
+Wire Wire Line
+	5500 6550 6225 6550
+Wire Wire Line
+	6275 2925 6950 2925
+Text Label 6950 2925 2    50   ~ 0
+ESP_GLOW_ON
+Text Label 6225 6550 2    50   ~ 0
+ESP_GLOW_ON
+$Comp
+L Connector:Conn_01x04_Female J202
+U 1 1 6145C0CC
+P 8625 2950
+F 0 "J202" H 8652 2926 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 8652 2835 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical" H 8625 2950 50  0001 C CNN
+F 3 "~" H 8625 2950 50  0001 C CNN
+	1    8625 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8425 2850 8025 2850
+$Comp
+L power:GND #PWR0161
+U 1 1 6145FA1F
+P 8025 2850
+F 0 "#PWR0161" H 8025 2600 50  0001 C CNN
+F 1 "GND" V 8030 2722 50  0000 R CNN
+F 2 "" H 8025 2850 50  0001 C CNN
+F 3 "" H 8025 2850 50  0001 C CNN
+	1    8025 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0162
+U 1 1 6145FABB
+P 8025 2950
+F 0 "#PWR0162" H 8025 2800 50  0001 C CNN
+F 1 "+3.3V" V 8040 3078 50  0000 L CNN
+F 2 "" H 8025 2950 50  0001 C CNN
+F 3 "" H 8025 2950 50  0001 C CNN
+	1    8025 2950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8025 2950 8425 2950
+Wire Wire Line
+	8425 3050 8025 3050
+Text Label 8025 3050 0    50   ~ 0
+EXT_1
+Text Label 8025 3150 0    50   ~ 0
+EXT_2
+Wire Wire Line
+	8025 3150 8425 3150
+Text Label 6675 3450 0    50   ~ 0
+EXT_1
+Wire Wire Line
+	6675 3450 6400 3450
+Wire Wire Line
+	6400 3450 6400 3425
+Wire Wire Line
+	6400 3425 6275 3425
+Wire Wire Line
+	6275 3625 6400 3625
+Wire Wire Line
+	6400 3625 6400 3650
+Wire Wire Line
+	6400 3650 6675 3650
+Text Label 6675 3650 0    50   ~ 0
+EXT_2
+Text GLabel 1775 5400 0    50   Input ~ 0
+~VUSB_PRESENT
+Wire Wire Line
+	1775 5400 1900 5400
+Text GLabel 1775 5525 0    50   Input ~ 0
+~CHG
+Wire Wire Line
+	1775 5525 1825 5525
+Wire Wire Line
+	1825 5525 1825 5600
+Wire Wire Line
+	1825 5600 1900 5600
+NoConn ~ 1900 5500
+NoConn ~ 1900 5900
+NoConn ~ 1900 6200
+NoConn ~ 3000 6200
+NoConn ~ 3000 5000
+NoConn ~ 6275 3125
+NoConn ~ 6275 3225
+NoConn ~ 6275 2725
+NoConn ~ 6275 4625
+NoConn ~ 6275 4725
+NoConn ~ 6275 4825
+NoConn ~ 6275 5025
+Text GLabel 6675 4525 2    50   Input ~ 0
+KNOCK_INT
+Wire Wire Line
+	6275 4525 6675 4525
+$Comp
+L Device:R_Small R207
+U 1 1 61456881
+P 7350 4225
+F 0 "R207" H 7409 4271 50  0000 L CNN
+F 1 "36R 0402" H 7409 4180 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 7350 4225 50  0001 C CNN
+F 3 "~" H 7350 4225 50  0001 C CNN
+	1    7350 4225
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7450 4225 8150 4225
+Wire Wire Line
+	6275 4225 7250 4225
+NoConn ~ 6275 3725
+NoConn ~ 6275 4125
+Wire Wire Line
+	6275 4425 6675 4425
+Wire Wire Line
+	6275 4325 6675 4325
+Wire Wire Line
+	6675 3325 6550 3325
+Wire Wire Line
+	6550 3325 6550 3200
+Connection ~ 6550 3325
+Wire Wire Line
+	6550 3325 6275 3325
+$Comp
+L Device:R_Small R208
+U 1 1 61485685
+P 7225 3200
+F 0 "R208" H 7284 3246 50  0000 L CNN
+F 1 "10k 0402" H 7284 3155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 7225 3200 50  0001 C CNN
+F 3 "~" H 7225 3200 50  0001 C CNN
+	1    7225 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6550 3200 7125 3200
+$Comp
+L power:GND #PWR0166
+U 1 1 6148A0BC
+P 7425 3200
+F 0 "#PWR0166" H 7425 2950 50  0001 C CNN
+F 1 "GND" H 7430 3027 50  0000 C CNN
+F 2 "" H 7425 3200 50  0001 C CNN
+F 3 "" H 7425 3200 50  0001 C CNN
+	1    7425 3200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7425 3200 7325 3200
 $EndSCHEMATC

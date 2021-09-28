@@ -318,8 +318,6 @@ F 3 "~" H 1925 4800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1925 4700 1925 4675
-Wire Wire Line
-	1925 4675 2000 4675
 Connection ~ 2350 4675
 Wire Wire Line
 	1650 4700 1650 4675
@@ -354,14 +352,6 @@ Wire Wire Line
 	1750 5525 2000 5525
 Wire Wire Line
 	1750 5425 2000 5425
-Wire Wire Line
-	2000 5175 2000 4675
-Connection ~ 2000 4675
-Wire Wire Line
-	2000 4675 2350 4675
-Wire Wire Line
-	2000 5275 2000 5175
-Connection ~ 2000 5175
 Text GLabel 6075 5025 0    50   Input ~ 0
 SCL
 Text GLabel 6075 5125 0    50   Input ~ 0
@@ -389,7 +379,7 @@ F 3 "" H 6750 4225 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6750 4225 6750 4375
-Text GLabel 2400 4575 1    50   Input ~ 0
+Text GLabel 1725 5175 0    50   Input ~ 0
 VGLOW
 $Comp
 L Mechanical:MountingHole_Pad H102
@@ -479,4 +469,48 @@ Wire Wire Line
 	6100 4800 6100 4825
 Wire Wire Line
 	6100 4825 6200 4825
+Text Notes 6925 4375 0    50   ~ 0
+7bit addr: 0x5A
+$Comp
+L power:+5V #PWR?
+U 1 1 61451818
+P 2400 4575
+AR Path="/60EE6959/61451818" Ref="#PWR?"  Part="1" 
+AR Path="/61451818" Ref="#PWR0159"  Part="1" 
+F 0 "#PWR0159" H 2400 4425 50  0001 C CNN
+F 1 "+5V" H 2415 4748 50  0000 C CNN
+F 2 "" H 2400 4575 50  0001 C CNN
+F 3 "" H 2400 4575 50  0001 C CNN
+	1    2400 4575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1925 4675 2100 4675
+Wire Wire Line
+	2000 5175 1725 5175
+Wire Wire Line
+	2000 5275 1925 5275
+Wire Wire Line
+	1925 5275 1925 5025
+Wire Wire Line
+	1925 5025 2100 5025
+Wire Wire Line
+	2100 5025 2100 4675
+Connection ~ 2100 4675
+Wire Wire Line
+	2100 4675 2350 4675
+$Comp
+L Graphic:SYM_Radioactive_Large SYM101
+U 1 1 61459890
+P 6125 7475
+F 0 "SYM101" H 6220 7755 50  0001 C CNN
+F 1 "SYM_Radioactive_Large" H 6220 7305 50  0001 C CNN
+F 2 "XasPrints:DragonIcon_7mm_Solder" H 6220 7355 50  0001 C CNN
+F 3 "~" H 6250 7355 50  0001 C CNN
+	1    6125 7475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 2050 9900 2050
+NoConn ~ 9900 2050
 $EndSCHEMATC
