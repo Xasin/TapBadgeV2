@@ -14,18 +14,59 @@
 #include "esp_spi_flash.h"
 
 #include <cmath>
+#include <array>
 
-#include <xasin/neocontroller.h>
+#include <xnm/neocontroller.h>
 
 #include <xasin/audio.h>
 #include <xasin/TrekAudio.h>
 
-Xasin::NeoController::NeoController test(GPIO_NUM_25, RMT_CHANNEL_0, 16);
+#include <MasterAction.h>
+#include <xasin/xai2c/DRV2605.h>
+
+#include "click_a.h"
+#include "click_b.h"
+
+Xasin::I2C::DRV2605 vibro;
+
+XNM::Neo::NeoController test(GPIO_NUM_25, RMT_CHANNEL_0, 16);
 Xasin::Audio::TX audio_out(I2S_NUM_0);
 
+std::array<XNM::Neo::IndicatorBulb, 16> t_bulbs = {};
+
 void update_pixels() {
+    static TickType_t next_switch = 0;
+
+    if(next_switch < xTaskGetTickCount())
+        next_switch = xTaskGetTickCount();
+
     for(int i=0; i<7; i++) {
         auto c = test.colors[i];
+
+        if(xTaskGetTickCount() >= next_switch) {
+            auto l = t_bulbs[i].switch_tick();
+            if(l) {
+                vibro.trig_sequence(2);
+
+                auto cassette = cassette_click_a;
+                if(l > 0)
+                    cassette = cassette_click_b;
+                
+                auto tmp = new Xasin::Audio::ByteCassette(audio_out, cassette.data_start, 
+                    cassette.data_end, 
+                    cassette.data_samplerate * (0.995F + 0.05F * (esp_random() % 1024) / 1024.0F));
+                
+                tmp->volume = 10;
+                tmp->start(true);
+
+                next_switch += 40/portTICK_PERIOD_MS;
+            }
+        }
+        auto bulb_c = t_bulbs[i].color_tick();
+        bulb_c.bMod(50);
+
+        c = 0;
+        c.merge_overlay(bulb_c);
 
         test.colors[i].r = c.g;
         test.colors[i].g = c.r;
@@ -64,17 +105,32 @@ void app_main(void)
 
     printf("Minimum free heap size: %d bytes\n", esp_get_minimum_free_heap_size());
 
+    XaI2C::MasterAction::init(GPIO_NUM_21, GPIO_NUM_14);
+	gpio_set_direction(GPIO_NUM_4, GPIO_MODE_OUTPUT);
+    gpio_set_level(GPIO_NUM_4, false);
+
+    vTaskDelay(200/portTICK_PERIOD_MS);
+
+    vibro.autocalibrate_lra();
+    vibro.sequence_mode();
+
     test.colors.fill(0);
     test.update();
 
-	gpio_set_direction(GPIO_NUM_4, GPIO_MODE_OUTPUT);
+    for(auto &bulb : t_bulbs) {
+        bulb.set(Material::GREEN, XNM::Neo::IDLE);
+    }
+
+    t_bulbs[1].set(Material::AMBER, XNM::Neo::FLASH);
+    t_bulbs[2].set(Material::RED, XNM::Neo::DFLASH);
+
+    t_bulbs[5].set(Material::CYAN, XNM::Neo::VAL_RISING);
+
 	gpio_set_level(GPIO_NUM_4, true);
 
     vTaskDelay(10);
 
     test.update();
-
-
 
     TaskHandle_t processing_handle;
 	xTaskCreatePinnedToCore(audio_processing_loop, "Audio", 30000, nullptr, 10, &processing_handle, 1);
@@ -88,27 +144,16 @@ void app_main(void)
     audio_out.init(processing_handle, speaker_tx_cfg);
     audio_out.calculate_volume = true;
 
-    audio_out.volume_mod = 255;
-
     Xasin::Trek::init(audio_out);
 
     vTaskDelay(100);
+
     Xasin::Trek::play(Xasin::Trek::PROG_DONE);
 
-
-    TickType_t last_beep = 0;
-    for (int i = 10000; i >= 0; i--) {
-        vTaskDelay(4);
-
-        for(int j = 0; j<16; j++)
-            test.colors[j] = Xasin::NeoController::Color::HSV(xTaskGetTickCount()/5 + 360/16 * j, 255, 50);
+    while(true) {
+        vTaskDelay(40/portTICK_PERIOD_MS);
 
         update_pixels();
-
-        if(xTaskGetTickCount() > last_beep) {
-            Xasin::Trek::play(Xasin::Trek::INPUT_REQ);
-            last_beep += 5000/portTICK_PERIOD_MS;
-        }
     }
 
     printf("Restarting now.\n");
