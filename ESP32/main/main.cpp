@@ -40,7 +40,7 @@ void update_pixels() {
     if(next_switch < xTaskGetTickCount())
         next_switch = xTaskGetTickCount();
 
-    for(int i=0; i<7; i++) {
+    for(int i=0; i<t_bulbs.size(); i++) {
         auto c = test.colors[i];
 
         if(xTaskGetTickCount() >= next_switch) {
@@ -54,12 +54,12 @@ void update_pixels() {
                 
                 auto tmp = new Xasin::Audio::ByteCassette(audio_out, cassette.data_start, 
                     cassette.data_end, 
-                    cassette.data_samplerate * (0.995F + 0.05F * (esp_random() % 1024) / 1024.0F));
+                    cassette.data_samplerate * (0.99F + 0.1F * (esp_random() % 1024) / 1024.0F));
                 
                 tmp->volume = 10;
                 tmp->start(true);
 
-                next_switch += 40/portTICK_PERIOD_MS;
+                next_switch += 1;
             }
         }
         auto bulb_c = t_bulbs[i].color_tick();
@@ -68,8 +68,12 @@ void update_pixels() {
         c = 0;
         c.merge_overlay(bulb_c);
 
-        test.colors[i].r = c.g;
-        test.colors[i].g = c.r;
+        if(i < 7) {
+            test.colors[i].r = c.g;
+            test.colors[i].g = c.r;
+        }
+        else
+            test.colors[i] = c;
     }
 
     test.update();
@@ -151,7 +155,7 @@ void app_main(void)
     Xasin::Trek::play(Xasin::Trek::PROG_DONE);
 
     while(true) {
-        vTaskDelay(40/portTICK_PERIOD_MS);
+        vTaskDelay(20/portTICK_PERIOD_MS);
 
         update_pixels();
     }
